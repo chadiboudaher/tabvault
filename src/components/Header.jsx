@@ -1,7 +1,18 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import React, { useState } from "react";
 
 const Header = () => {
   const [currentNav, setCurrentNav] = useState("1");
+
+  useGSAP(() => {
+    gsap.from("#header-tab", {
+      y: -100,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power1.out",
+    });
+  });
 
   const navTitles = [
     {
@@ -28,7 +39,10 @@ const Header = () => {
   }
 
   return (
-    <header className="flex justify-between items-center pl-8 pr-3 py-3 bg-prussian-blue-400 text-alabaster-grey-50 rounded-[50px] my-4 mx-4">
+    <header
+      id="header-tab"
+      className="flex justify-between items-center pl-8 pr-3 py-3 bg-prussian-blue-400 text-alabaster-grey-50 rounded-[50px] my-4 mx-4"
+    >
       <h1 className="text-2xl font-bold tracking-wider text-pumpkin-spice-500">
         TabVault
       </h1>
