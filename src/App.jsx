@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 const App = () => {
   return (
-    <div>
+    <div className="h-dvh overflow-x-hidden bg-stormy-teal-100">
       <Header />
+      <Hero />
     </div>
   );
 };

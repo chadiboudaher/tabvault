@@ -67,7 +67,7 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button className="py-3 px-4 bg-neon-chartreuse-400 text-onyx-800 rounded-[40px]">
+      <button className="py-3 px-4 bg-neon-chartreuse-400 text-onyx-800 rounded-[40px] hover:bg-neon-chartreuse-300 cursor-pointer">
         Get Started
       </button>
     </header>
